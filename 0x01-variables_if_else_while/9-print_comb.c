@@ -1,36 +1,33 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - Entry
+ * main - Entry point
  * Return: 0 (Success)
  */
 int main(void)
 {
-	int c;
-	int d = 0;
+	int max_num = 10;
+	int counter = 0;
 
-	while (d < 10)
+	while (counter < max_num)
 	{
-		c = 0;
-		while (c < 10)
+		/**
+		 * if (counter != 0 && (counter % 11 == 0))
+		 * continue;
+		 */
+		putchar('0' + counter);
+
+		if (counter != max_num - 1)
 		{
-			if (d != c && d < c)
-			{
-				putchar('0' + d);
-				putchar('0' + c);
-
-				if (c + d != 17)
-				{
-					putchar(',');
-					putchar(',');
-				}
-			}
-
-			c++;
+			putchar(',');
+			putchar(' ');
 		}
-		d++;
+		else
+		{
+			putchar('\n');
+		}
+
+		counter++;
 	}
-	puthchar('\n');
 	return (0);
 }
