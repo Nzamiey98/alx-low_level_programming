@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry
+ * main -Entry
  * Return: 0 (Success)
  */
 int main(void)
@@ -11,10 +11,8 @@ int main(void)
 
 	while (counter < max_num)
 	{
-		/**
-		 * if (counter != 0 && (counter % 11 == 0))
-		 * continue;
-		 */
+		if (counter != 0 && (counter % 11 == 0))
+			continue;
 		putchar('0' + counter);
 
 		if (counter != max_num - 1)
