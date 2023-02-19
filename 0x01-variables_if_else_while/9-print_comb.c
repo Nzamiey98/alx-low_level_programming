@@ -1,21 +1,17 @@
 #include <stdio.h>
 
 /**
- * main -Entry
+ * main - Entry
  * Return: 0 (Success)
  */
 int main(void)
 {
-	int max_num = 10;
-	int counter = 0;
+	int n;
 
-	while (counter < max_num)
+	for (n = 48; n < 58; n++)
 	{
-		if (counter != 0 && (counter % 11 == 0))
-			continue;
-		putchar('0' + counter);
-
-		if (counter != max_num - 1)
+		putchar(n);
+		if (n != 57)
 		{
 			putchar(',');
 			putchar(' ');
@@ -25,7 +21,7 @@ int main(void)
 			putchar('\n');
 		}
 
-		counter++;
+		n++;
 	}
 	return (0);
 }
